@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_purple"
+        tools:context=".view.masterviewfragment.MasterViewFragment">
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:layout_toStartOf="@id/search_button"
+            android:layout_alignParentStart="true"
+            android:paddingStart="10dp"
+            android:textSize="14sp"
+            android:padding="2dp"
+            android:textColor="@color/white"
+            android:textColorHint="@drawable/selector"
+            android:hint="@string/search_hint"
+            android:textCursorDrawable="@color/white"
+            android:background="@color/mediumPurple"/>
+        <ImageView
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="5dp"
+            android:layout_toStartOf="@id/sort_button"
+            android:src="@drawable/ic_search"/>
+        <ImageView
+            android:id="@+id/sort_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="15dp"
+            android:layout_alignParentEnd="true"
+            android:tooltipText="sort by like"
+            android:src="@drawable/ic_sort"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/search_bar"/>
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</layout>

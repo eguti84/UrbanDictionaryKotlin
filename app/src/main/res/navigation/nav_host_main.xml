@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host_main"
+    app:startDestination="@id/recyclerViewFragment">
+    <fragment
+        android:id="@+id/recyclerViewFragment"
+        android:name="com.batch.urbandictionarykotlin.view.masterviewfragment.MasterViewFragment"
+        android:label="RecyclerViewFragment" >
+        <action
+            android:id="@+id/next_detail"
+            app:destination="@id/detailViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailViewFragment"
+        android:name="com.batch.urbandictionarykotlin.view.detailviewfragment.DetailViewFragment"
+        android:label="fragment_detail_view"
+        tools:layout="@layout/fragment_detail_view" />
+</navigation>
